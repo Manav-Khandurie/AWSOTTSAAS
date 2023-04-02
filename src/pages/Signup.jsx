@@ -5,6 +5,9 @@ import BackgroundImage from '../components/BackgroundImage';
 import Header from '../components/Header';
 import {firebaseAuth} from "../utils/firebase-config"
 import {useNavigate} from "react-router-dom";
+import { Amplify } from 'aws-amplify';
+
+//Amplify.configure(config);
 
 export default function Signup() {
   const navigate=useNavigate();
@@ -20,6 +23,7 @@ export default function Signup() {
       await createUserWithEmailAndPassword(firebaseAuth,email, password);
     } catch (error) {
       console.log(error);
+      alert("User Not registered as password is weak , entering as Guest");
     }
     navigate("/");
   };

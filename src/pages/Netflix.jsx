@@ -32,7 +32,7 @@ export default function Netflix() {
           
           <div className='buttons flex'>
             <button className='flex j-center a-center' onClick={()=>navigate("/Player")}><FaPlay/>Play  </button>
-            <a href='https://www.pexels.com/video/watching-rain-on-the-road-in-worm-s-eye-view-3343679/'  >        
+            <a href='https://www.pexels.com/video/watching-rain-on-the-road-in-worm-s-eye-view-3343679/'  target="_blank">        
             <button className='flex j-center a-center' ><AiOutlineInfoCircle />MoreInfo  </button> </a> 
           </div>
         </div>
